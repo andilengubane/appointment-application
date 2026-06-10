@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Command\" />
+    <Folder Include="Quiries\" />
+  </ItemGroup>
+
 </Project>
