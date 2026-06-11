@@ -11,4 +11,13 @@
     <Folder Include="Quiries\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="13.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AppointmentBookingSystem.Domain\AppointmentBookingSystem.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
