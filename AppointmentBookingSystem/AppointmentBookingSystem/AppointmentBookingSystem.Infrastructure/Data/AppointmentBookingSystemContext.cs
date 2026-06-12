@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using AppointmentBookingSystem.Domain.Entities;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -12,6 +13,6 @@ namespace AppointmentBookingSystem.Infrastructure.Data
                : base(option)
         {
         }
-        //public DbSet<UserEntitiy> User { get; set; }
+        public DbSet<UserEntity> User { get; set; }
     }
 }

@@ -1,0 +1,32 @@
+2026-06-12 09:33:38.487 +02:00 [Error] An error occurred using the connection to database '"AppointmentBook"' on server '"tcp://localhost:5432"'.
+2026-06-12 13:10:51.951 +02:00 [Error] An error occurred using the connection to database '"AppointmentBook"' on server '"tcp://localhost:5432"'.
+2026-06-12 13:10:59.062 +02:00 [Error] Failed executing DbCommand ("5,372"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE DATABASE \"AppointmentBook\";"
+2026-06-12 13:15:23.337 +02:00 [Error] An error occurred using the connection to database '"AppointmentBook"' on server '"tcp://localhost:5432"'.
+2026-06-12 13:15:29.245 +02:00 [Information] Executed DbCommand ("4,837"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE DATABASE \"AppointmentBook\";"
+2026-06-12 13:15:30.206 +02:00 [Information] Executed DbCommand ("50"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE IF NOT EXISTS \"__EFMigrationsHistory\" (
+    \"MigrationId\" character varying(150) NOT NULL,
+    \"ProductVersion\" character varying(32) NOT NULL,
+    CONSTRAINT \"PK___EFMigrationsHistory\" PRIMARY KEY (\"MigrationId\")
+);"
+2026-06-12 13:15:30.217 +02:00 [Information] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2026-06-12 13:15:30.220 +02:00 [Information] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""LOCK TABLE \"__EFMigrationsHistory\" IN ACCESS EXCLUSIVE MODE"
+2026-06-12 13:15:30.229 +02:00 [Information] Executed DbCommand ("8"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"MigrationId\", \"ProductVersion\"
+FROM \"__EFMigrationsHistory\"
+ORDER BY \"MigrationId\";"
+2026-06-12 13:15:30.246 +02:00 [Information] Applying migration '"20260612111017_initials"'.
+2026-06-12 13:15:30.292 +02:00 [Information] Executed DbCommand ("36"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE \"User\" (
+    \"Id\" uuid NOT NULL,
+    \"Email\" text NOT NULL,
+    \"Username\" text NOT NULL,
+    \"Password\" text NOT NULL,
+    CONSTRAINT \"PK_User\" PRIMARY KEY (\"Id\")
+);"
+2026-06-12 13:15:30.296 +02:00 [Information] Executed DbCommand ("4"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO \"__EFMigrationsHistory\" (\"MigrationId\", \"ProductVersion\")
+VALUES ('20260612111017_initials', '9.0.9');"
