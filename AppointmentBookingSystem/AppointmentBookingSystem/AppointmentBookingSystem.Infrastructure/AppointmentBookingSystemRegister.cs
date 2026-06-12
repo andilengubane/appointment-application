@@ -2,7 +2,9 @@
 using Microsoft.EntityFrameworkCore;
 using AppointmentBookingSystem.Domain.Options;
 using Microsoft.Extensions.DependencyInjection;
+using AppointmentBookingSystem.Domain.Interface;
 using AppointmentBookingSystem.Infrastructure.Data;
+using AppointmentBookingSystem.Infrastructure.Repository;
 
 namespace AppointmentBookingSystem.Infrastructure
 {
@@ -16,7 +18,7 @@ namespace AppointmentBookingSystem.Infrastructure
             });
 
             services.AddScoped<DbContext, AppointmentBookingSystemContext>();
-            //services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IUserRepository, UserRepository>();
 
             return services;
         }
