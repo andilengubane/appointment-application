@@ -1,8 +1,5 @@
 ﻿using AppointmentBookingSystem.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace AppointmentBookingSystem.Infrastructure.Data
 {
@@ -14,5 +11,6 @@ namespace AppointmentBookingSystem.Infrastructure.Data
         {
         }
         public DbSet<UserEntity> User { get; set; }
+        public DbSet<AppointmentEntity> Appointment { get; set; }
     }
 }

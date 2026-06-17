@@ -1,0 +1,46 @@
+2026-06-17 14:56:32.548 +02:00 [Information] Now listening on: "https://localhost:5001"
+2026-06-17 14:56:32.630 +02:00 [Information] Now listening on: "http://localhost:5000"
+2026-06-17 14:56:32.841 +02:00 [Information] Application started. Press Ctrl+C to shut down.
+2026-06-17 14:56:32.841 +02:00 [Information] Hosting environment: "Development"
+2026-06-17 14:56:32.842 +02:00 [Information] Content root path: "C:\Git\AppointmentBookingSystem\AppointmentBookingSystem\AppointmentBookingSystem\AppointmentBookingSystem.Api"
+2026-06-17 14:56:39.903 +02:00 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/swagger/index.html""" - null null
+2026-06-17 14:56:40.845 +02:00 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 962.8119ms
+2026-06-17 14:56:40.888 +02:00 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/_vs/browserLink""" - null null
+2026-06-17 14:56:40.888 +02:00 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/_framework/aspnetcore-browser-refresh.js""" - null null
+2026-06-17 14:56:40.912 +02:00 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/_framework/aspnetcore-browser-refresh.js""" - 200 14961 "application/javascript; charset=utf-8" 23.0909ms
+2026-06-17 14:56:40.996 +02:00 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 107.9376ms
+2026-06-17 14:56:41.080 +02:00 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/swagger/v1/swagger.json""" - null null
+2026-06-17 14:56:41.116 +02:00 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 36.0611ms
+2026-06-17 15:06:38.917 +02:00 [Information] Executed DbCommand ("56"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"MigrationId\", \"ProductVersion\"
+FROM \"__EFMigrationsHistory\"
+ORDER BY \"MigrationId\";"
+2026-06-17 15:06:39.773 +02:00 [Information] Executed DbCommand ("14"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE IF NOT EXISTS \"__EFMigrationsHistory\" (
+    \"MigrationId\" character varying(150) NOT NULL,
+    \"ProductVersion\" character varying(32) NOT NULL,
+    CONSTRAINT \"PK___EFMigrationsHistory\" PRIMARY KEY (\"MigrationId\")
+);"
+2026-06-17 15:06:39.785 +02:00 [Information] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2026-06-17 15:06:39.789 +02:00 [Information] Executed DbCommand ("2"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""LOCK TABLE \"__EFMigrationsHistory\" IN ACCESS EXCLUSIVE MODE"
+2026-06-17 15:06:39.790 +02:00 [Information] Executed DbCommand ("0"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT \"MigrationId\", \"ProductVersion\"
+FROM \"__EFMigrationsHistory\"
+ORDER BY \"MigrationId\";"
+2026-06-17 15:06:39.801 +02:00 [Information] Applying migration '"20260617130608_AddingAppointmentEntity"'.
+2026-06-17 15:06:39.947 +02:00 [Information] Executed DbCommand ("135"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE \"Appointment\" (
+    \"Id\" uuid NOT NULL,
+    \"Title\" text NOT NULL,
+    \"Description\" text NOT NULL,
+    \"IsActive\" boolean NOT NULL,
+    \"RequestedBy\" text NOT NULL,
+    \"UpdateBy\" text NOT NULL,
+    \"CreatedDate\" timestamp with time zone NOT NULL,
+    \"UpdatedDate\" timestamp with time zone NOT NULL,
+    CONSTRAINT \"PK_Appointment\" PRIMARY KEY (\"Id\")
+);"
+2026-06-17 15:06:39.951 +02:00 [Information] Executed DbCommand ("3"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO \"__EFMigrationsHistory\" (\"MigrationId\", \"ProductVersion\")
+VALUES ('20260617130608_AddingAppointmentEntity', '9.0.9');"

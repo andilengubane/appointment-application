@@ -1,0 +1,38 @@
+2026-06-15 10:17:58.224 +02:00 [Information] Now listening on: "https://localhost:5001"
+2026-06-15 10:17:58.314 +02:00 [Information] Now listening on: "http://localhost:5000"
+2026-06-15 10:17:58.654 +02:00 [Information] Application started. Press Ctrl+C to shut down.
+2026-06-15 10:17:58.654 +02:00 [Information] Hosting environment: "Development"
+2026-06-15 10:17:58.655 +02:00 [Information] Content root path: "C:\Git\AppointmentBookingSystem\AppointmentBookingSystem\AppointmentBookingSystem\AppointmentBookingSystem.Api"
+2026-06-15 10:18:05.292 +02:00 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/swagger/index.html""" - null null
+2026-06-15 10:18:06.081 +02:00 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/_framework/aspnetcore-browser-refresh.js""" - null null
+2026-06-15 10:18:06.083 +02:00 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/_vs/browserLink""" - null null
+2026-06-15 10:18:06.083 +02:00 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/swagger/index.html""" - 200 null "text/html;charset=utf-8" 794.9226ms
+2026-06-15 10:18:06.096 +02:00 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/_framework/aspnetcore-browser-refresh.js""" - 200 14961 "application/javascript; charset=utf-8" 15.5775ms
+2026-06-15 10:18:06.252 +02:00 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/_vs/browserLink""" - 200 null "text/javascript; charset=UTF-8" 169.9586ms
+2026-06-15 10:18:06.359 +02:00 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/swagger/v1/swagger.json""" - null null
+2026-06-15 10:18:06.393 +02:00 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/swagger/v1/swagger.json""" - 200 null "application/json;charset=utf-8" 33.9162ms
+2026-06-15 10:18:19.763 +02:00 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/api/getallusersasync""" - null null
+2026-06-15 10:18:19.776 +02:00 [Information] Executing endpoint '"AppointmentBookingSystem.Api.Controllers.UserController.GetAllUserAsync (AppointmentBookingSystem.Api)"'
+2026-06-15 10:18:19.801 +02:00 [Information] Route matched with "{action = \"GetAllUser\", controller = \"User\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAllUserAsync()" on controller "AppointmentBookingSystem.Api.Controllers.UserController" ("AppointmentBookingSystem.Api").
+2026-06-15 10:18:19.807 +02:00 [Warning] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-06-15 10:18:22.057 +02:00 [Information] Executed DbCommand ("60"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT u.\"Id\", u.\"Email\", u.\"Password\", u.\"Username\"
+FROM \"User\" AS u"
+2026-06-15 10:18:22.118 +02:00 [Information] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[AppointmentBookingSystem.Domain.Entities.UserEntity, AppointmentBookingSystem.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2026-06-15 10:18:22.138 +02:00 [Information] Executed action "AppointmentBookingSystem.Api.Controllers.UserController.GetAllUserAsync (AppointmentBookingSystem.Api)" in 2329.331ms
+2026-06-15 10:18:22.139 +02:00 [Information] Executed endpoint '"AppointmentBookingSystem.Api.Controllers.UserController.GetAllUserAsync (AppointmentBookingSystem.Api)"'
+2026-06-15 10:18:22.151 +02:00 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/api/getallusersasync""" - 200 null "application/json; charset=utf-8" 2388.1714ms
+2026-06-15 10:22:36.060 +02:00 [Information] Request starting "HTTP/2" "POST" "https"://"localhost:5001""""/api/adduserasync""" - "application/json" 143
+2026-06-15 10:22:36.062 +02:00 [Information] Executing endpoint '"AppointmentBookingSystem.Api.Controllers.UserController.AddUserAsync (AppointmentBookingSystem.Api)"'
+2026-06-15 10:22:36.081 +02:00 [Information] Route matched with "{action = \"AddUser\", controller = \"User\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AddUserAsync(AppointmentBookingSystem.Domain.Entities.UserEntity)" on controller "AppointmentBookingSystem.Api.Controllers.UserController" ("AppointmentBookingSystem.Api").
+2026-06-15 10:22:36.585 +02:00 [Information] Executed DbCommand ("132"ms) [Parameters=["@p0='?' (DbType = Guid), @p1='?', @p2='?', @p3='?'"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO \"User\" (\"Id\", \"Email\", \"Password\", \"Username\")
+VALUES (@p0, @p1, @p2, @p3);"
+2026-06-15 10:22:36.623 +02:00 [Information] Add user details 2026/06/15 00:00:00: AppointmentBookingSystem.Domain.Entities.UserEntity
+2026-06-15 10:22:36.624 +02:00 [Information] Executing "OkObjectResult", writing value of type '"AppointmentBookingSystem.Domain.Entities.UserEntity"'.
+2026-06-15 10:22:36.628 +02:00 [Information] Executed action "AppointmentBookingSystem.Api.Controllers.UserController.AddUserAsync (AppointmentBookingSystem.Api)" in 547.0946ms
+2026-06-15 10:22:36.628 +02:00 [Information] Executed endpoint '"AppointmentBookingSystem.Api.Controllers.UserController.AddUserAsync (AppointmentBookingSystem.Api)"'
+2026-06-15 10:22:36.629 +02:00 [Information] Request finished "HTTP/2" "POST" "https"://"localhost:5001""""/api/adduserasync""" - 200 null "application/json; charset=utf-8" 568.8633ms
+2026-06-15 10:26:25.246 +02:00 [Information] Request starting "HTTP/2" "GET" "https"://"localhost:5001""""/""" - null null
+2026-06-15 10:26:25.273 +02:00 [Information] Request finished "HTTP/2" "GET" "https"://"localhost:5001""""/""" - 404 null null 30.5854ms
+2026-06-15 10:26:25.275 +02:00 [Information] Request reached the end of the middleware pipeline without being handled by application code. Request path: "GET" "https"://"localhost:5001""""/", Response status code: 404
