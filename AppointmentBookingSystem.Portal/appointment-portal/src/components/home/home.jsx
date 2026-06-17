@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
 import "./home.css"; 
+import { getItems } from "../../service/servicemanager";
+
+// src/App.jsx
 
 function Home() {
     const [items, setItems] = useState([]);
@@ -8,7 +11,7 @@ function Home() {
 
   // Retrieve all the items
   useEffect(() => {
-    fetch("/api/grocery-list")
+    fetch( getItems.path +"/api/getallusersasync")
       .then((data) => data.json())
       .then(({ items }) => setItems(items));
   }, [refresh]);
@@ -74,6 +77,31 @@ function Home() {
               />
               {item.title}
             </label>
+              <label>
+              <input
+                type="checkbox"
+                checked={item.isDone}
+                onChange={() => handleMarkAsDone(item)}
+              />
+              {item.title}
+            </label>
+              <label>
+              <input
+                type="checkbox"
+                checked={item.isDone}
+                onChange={() => handleMarkAsDone(item)}
+              />
+              {item.title}
+            </label>
+              <label>
+              <input
+                type="checkbox"
+                checked={item.isDone}
+                onChange={() => handleMarkAsDone(item)}
+              />
+              {item.title}
+            </label>
+            
             <button className="button-submit" onClick={() => handleDelete(item)}>
               delete
             </button>

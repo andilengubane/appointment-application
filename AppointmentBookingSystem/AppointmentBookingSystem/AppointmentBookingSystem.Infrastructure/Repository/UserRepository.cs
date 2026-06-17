@@ -2,7 +2,6 @@
 using AppointmentBookingSystem.Domain.Entities;
 using AppointmentBookingSystem.Domain.Interface;
 using AppointmentBookingSystem.Infrastructure.Data;
-using System;
 
 namespace AppointmentBookingSystem.Infrastructure.Repository
 {
@@ -13,12 +12,12 @@ namespace AppointmentBookingSystem.Infrastructure.Repository
             return await _appointmentBookingSystemContext.User.ToListAsync();
         }
 
-        public async Task<UserEntity> GetUserByIdAsync(string password, string usernae)
+        public async Task<UserEntity> GetUserByIdAsync(string password, string username)
         {
-            var userEntitiy = await _appointmentBookingSystemContext.User.FirstOrDefaultAsync(u => u.Password == password && u.Username == usernae);
+            var userEntitiy = await _appointmentBookingSystemContext.User.FirstOrDefaultAsync(u => u.Password == password && u.Username == username);
 
             if (userEntitiy == null)
-                throw new KeyNotFoundException($"No user  registration found with Id: {usernae}");
+                throw new KeyNotFoundException($"No user  registration found with Id: {username}");
 
             return userEntitiy;
         }

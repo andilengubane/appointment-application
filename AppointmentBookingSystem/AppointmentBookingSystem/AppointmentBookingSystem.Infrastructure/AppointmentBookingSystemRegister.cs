@@ -19,6 +19,7 @@ namespace AppointmentBookingSystem.Infrastructure
 
             services.AddScoped<DbContext, AppointmentBookingSystemContext>();
             services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IAppointmentRepository, AppointmentRepository>();
 
             return services;
         }
